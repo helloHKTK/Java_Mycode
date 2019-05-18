@@ -1,6 +1,6 @@
 int len = 4;		
 //--------------- 1 原List ----------------------------------				
-		List<BitSet> list1 = new ArrayList<BitSet>();// populations[存放整个种群]
+		List<BitSet> list1 = new ArrayList<BitSet>();
 
 		BitSet bitset1 = new BitSet(len);
 		bitset1.set(0);
