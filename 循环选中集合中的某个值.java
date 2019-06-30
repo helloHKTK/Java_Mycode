@@ -1,4 +1,4 @@
-List<Integer> Collection = new ArrayList<>();
+		List<Integer> Collection = new ArrayList<>();
 
 		Collection.add(11);
 		Collection.add(22);
