@@ -87,3 +87,34 @@ public ArrayList<Integer> GetLeastNumbers_Solution(int [] input, int k) {
     }
 ```
 
+```java
+//自己也是基于冒泡排序的思路(牛客网通过)
+
+import java.util.*;
+public class Solution {
+    public ArrayList<Integer> GetLeastNumbers_Solution(int [] input, int k) {
+        
+        ArrayList<Integer> res = new ArrayList<>();
+        if(k > input.length)
+            return res;
+        
+        // 基于冒泡排序的思想,只是将每次最大的数就位变成了最小的数就位
+        int i,j;
+        for(i = 0; i < k; i++) // 次处将i<input.length换成了i<k【表示趟数】
+        {
+            for(j = 0; j < input.length - i - 1; j++)
+                if(input[j] < input[j+1])
+                {
+                    input[j] ^= input[j+1];
+                    input[j+1] ^= input[j];
+                    input[j] ^= input[j+1];
+                }
+            res.add(input[input.length-1-i]); // 当前排行的元素加入list
+        }
+        return res;            
+    }
+}
+```
+
+
+
